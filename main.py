@@ -13,7 +13,10 @@ import dearpygui.dearpygui as dpg
 
 # ROS2
 import rclpy
+from rclpy.executors import MultiThreadedExecutor
 
+# ROS2 Init
+rclpy.init()
 try:
     from .node_editor.util import check_camera_connection
     from .node_editor.node_editor import DpgNodeEditor
@@ -172,8 +175,7 @@ def main():
         node_dir=current_path + '/node',
     )
 
-    # ROS2 Init
-    rclpy.init()
+    ros2_exec = MultiThreadedExecutor()
 
     # ビューポート表示
     dpg.show_viewport()
@@ -189,6 +191,7 @@ def main():
         node_image_dict = {}
         node_result_dict = {}
         while dpg.is_dearpygui_running():
+            ros2_exec.spin_once()
             update_node_info(
                 node_editor,
                 node_image_dict,
@@ -216,6 +219,7 @@ def main():
     event_loop.stop()
 
     # ROS2 Shutdown
+    ros2_exec.shutdown()
     rclpy.shutdown()
 
     # DearPyGuiコンテキスト破棄
