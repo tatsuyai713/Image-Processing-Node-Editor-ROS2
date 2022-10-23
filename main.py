@@ -11,6 +11,9 @@ import os
 import cv2
 import dearpygui.dearpygui as dpg
 
+# ROS2
+import rclpy
+
 try:
     from .node_editor.util import check_camera_connection
     from .node_editor.node_editor import DpgNodeEditor
@@ -169,6 +172,9 @@ def main():
         node_dir=current_path + '/node',
     )
 
+    # ROS2 Init
+    rclpy.init()
+
     # ビューポート表示
     dpg.show_viewport()
 
@@ -208,6 +214,10 @@ def main():
     print('**** Stop Event Loop ********')
     node_editor.set_terminate_flag()
     event_loop.stop()
+
+    # ROS2 Shutdown
+    rclpy.shutdown()
+
     # DearPyGuiコンテキスト破棄
     print('**** Destroy DearPyGui Context ********')
     dpg.destroy_context()
