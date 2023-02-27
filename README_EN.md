@@ -115,6 +115,18 @@ Read the node settings(json file) output by Export<br>
     </tr>
     <tr>
         <td width="200">
+            Video(Set Frame Position)
+        </td>
+        <td width="320">
+            <img src="https://user-images.githubusercontent.com/37477845/211860076-00b700a5-18e1-46cc-ae30-376976d54f63.png" loading="lazy" width="300px">
+        </td>
+        <td width="760">
+            A node that reads a video (mp4, avi) and outputs an image at the specified frame position<br>
+            Open the file dialog with "Select Movie" button
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
             WebCam
         </td>
         <td width="320">
@@ -315,6 +327,17 @@ Read the node settings(json file) output by Export<br>
         <td width="760">
             A node that transforms an input image(360-degree image) with the specified roll, pitch, and yaw axes and outputs the image<br>
             The input image is assumed to be an equirectangular projection image
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
+            Resize
+        </td>
+        <td width="320">
+            <img src="https://user-images.githubusercontent.com/37477845/210739536-5f70e55a-3433-4325-81e2-79619943bd9f.png" loading="lazy" width="300px">
+        </td>
+        <td width="760">
+            A node that resizes the input image with the specified height, width and interpolation method and outputs the image.
         </td>
     </tr>
 </table>
@@ -580,7 +603,7 @@ Nodes whose specifications may change significantly in the future
             <img src="https://user-images.githubusercontent.com/37477845/172049681-67df2cc3-3db3-4766-a96e-f7c557e4a5b9.png" loading="lazy" width="300px">
         </td>
         <td width="760">
-            A node that inputs an Object Detection node and executes MOT(Multi Object Tracking)
+            Node that inputs an Object Detection node and executes MOT(Multi Object Tracking)
         </td>
     </tr>
     <tr>
@@ -594,6 +617,17 @@ Nodes whose specifications may change significantly in the future
             Node that executes Python code <br>
             The variable for the input image is "input_image" <br>
             The variable for the output image is "output_image"
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
+            Screen Capture
+        </td>
+        <td width="320">
+            <img src="https://user-images.githubusercontent.com/37477845/216200610-5a5714c0-99ac-4ec9-a56e-90ae99088815.png" loading="lazy" width="300px">
+        </td>
+        <td width="760">
+            Node that captures and outputs the desktop full screen<br>
         </td>
     </tr>
 </table>

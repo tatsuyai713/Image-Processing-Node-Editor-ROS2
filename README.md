@@ -115,6 +115,18 @@ Exportで出力したノード設定(jsonファイル)を読み込む<br>
     </tr>
     <tr>
         <td width="200">
+            Video(Set Frame Position)
+        </td>
+        <td width="320">
+            <img src="https://user-images.githubusercontent.com/37477845/211860076-00b700a5-18e1-46cc-ae30-376976d54f63.png" loading="lazy" width="300px">
+        </td>
+        <td width="760">
+            動画(mp4, avi)を読み込み、指定フレーム位置の画像を出力するノード<br>
+            「Select Movie」ボタンでファイルダイアログをオープン
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
             WebCam
         </td>
         <td width="320">
@@ -316,6 +328,17 @@ Exportで出力したノード設定(jsonファイル)を読み込む<br>
         <td width="760">
             入力画像（360度画像）を指定のロール軸、ピッチ軸、ヨー軸で変換して、画像を出力するノード<br>
             入力画像は正距円筒図法の画像を想定
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
+            Resize
+        </td>
+        <td width="320">
+            <img src="https://user-images.githubusercontent.com/37477845/210739536-5f70e55a-3433-4325-81e2-79619943bd9f.png" loading="lazy" width="300px">
+        </td>
+        <td width="760">
+            入力画像を指定の高さ、幅、補間方法でリサイズして、画像を出力するノード
         </td>
     </tr>
 </table>
@@ -599,6 +622,17 @@ Exportで出力したノード設定(jsonファイル)を読み込む<br>
             Pythonコードを実行するノード<br>
             入力画像用の変数は「input_image」<br>
             出力画像用の変数は「output_image」
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
+            Screen Capture
+        </td>
+        <td width="320">
+            <img src="https://user-images.githubusercontent.com/37477845/216200610-5a5714c0-99ac-4ec9-a56e-90ae99088815.png" loading="lazy" width="300px">
+        </td>
+        <td width="760">
+            デスクトップ全画面をキャプチャして出力するノード<br>
         </td>
     </tr>
 </table>
